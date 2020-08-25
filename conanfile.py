@@ -20,7 +20,7 @@ class CapicxxCoreRuntimeConan(ConanFile):
         "fPIC": [ True, False ],
     }
     default_options = {
-        'shared': False,
+        'shared': True,
         'fPIC': True,
     }
     generators = "cmake_find_package"
