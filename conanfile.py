@@ -81,3 +81,4 @@ class CapicxxCoreRuntimeConan(ConanFile):
             self.cpp_info.libs.extend(['pthread'])
         elif self.settings.os == "QNX":
             self.cpp_info.libs.extend(['socket'])
+            self.cpp_info.defines.extend(["__EXT_BSD", "__QNXNTO__", "_QNX_SOURCE"])
