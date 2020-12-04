@@ -7,7 +7,7 @@ from conans import ConanFile, CMake, tools
 
 class CapicxxCoreRuntimeConan(ConanFile):
     name = "capicxx-core-runtime"
-    version = "3.1.12.6"
+    version = "3.1.12.7"
     license = "https://github.com/maingig/capicxx-core-runtime/blob/master/LICENSE"
     author = "https://github.com/maingig/capicxx-core-runtime/blob/master/AUTHORS"
     url = "https://github.com/maingig/capicxx-core-runtime.git"
@@ -38,7 +38,7 @@ class CapicxxCoreRuntimeConan(ConanFile):
 
     def source(self):
         self.run("git clone %s %s" % (self.source_url, self.name))
-        self.run("cd %s && git checkout master" % (self.name))
+        self.run("cd %s && git checkout tags/%s" % (self.name, self.version))
         """Wrap the original CMake file to call conan_basic_setup
         """
         shutil.move("%s/CMakeLists.txt" % (self.name), "%s/CMakeListsOriginal.txt" % (self.name))
