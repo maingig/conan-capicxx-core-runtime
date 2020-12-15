@@ -7,7 +7,7 @@ from conans import ConanFile, CMake, tools
 
 class CapicxxCoreRuntimeConan(ConanFile):
     name = "capicxx-core-runtime"
-    version = "3.1.12.7"
+    version = "3.2.0"
     license = "https://github.com/maingig/capicxx-core-runtime/blob/master/LICENSE"
     author = "https://github.com/maingig/capicxx-core-runtime/blob/master/AUTHORS"
     url = "https://github.com/maingig/capicxx-core-runtime.git"
